@@ -1,0 +1,38 @@
+[gd_scene format=3 uid="uid://c153h1nfy1yqs"]
+
+[ext_resource type="PackedScene" uid="uid://dler10jav1mfj" path="res://scenes/tile_map.tscn" id="1_0wfyh"]
+[ext_resource type="PackedScene" uid="uid://ms66jqlolilp" path="res://scenes/player.tscn" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://bwbf3sfsy2wo0" path="res://script/killzone.gd" id="3_sugp2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
+size = Vector2(8355, 635)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
+distance = 1.0000305
+
+[node name="main" type="Node2D" unique_id=1898906107]
+metadata/_edit_horizontal_guides_ = [512.0, 109.0]
+metadata/_edit_vertical_guides_ = [7.0]
+
+[node name="tile_map" parent="." unique_id=1734353351 instance=ExtResource("1_0wfyh")]
+
+[node name="player" parent="." unique_id=1794440396 instance=ExtResource("1_ig7tw")]
+texture_filter = 1
+position = Vector2(185, 484)
+
+[node name="Killzone" type="Area2D" parent="." unique_id=1098238552]
+script = ExtResource("3_sugp2")
+respawn_point = Vector2(242, 460)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1543252662]
+position = Vector2(4017, 1249.5)
+shape = SubResource("RectangleShape2D_0wfyh")
+
+[node name="Left wall" type="StaticBody2D" parent="." unique_id=910379198]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall" unique_id=1595095400]
+position = Vector2(0, 472)
+rotation = 1.5707964
+shape = SubResource("WorldBoundaryShape2D_sugp2")
+
+[connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]

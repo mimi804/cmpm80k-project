@@ -29,6 +29,7 @@ position = Vector2(4017, 1249.5)
 shape = SubResource("RectangleShape2D_0wfyh")
 
 [node name="Left wall" type="StaticBody2D" parent="." unique_id=910379198]
+position = Vector2(-2306, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall" unique_id=1595095400]
 position = Vector2(0, 472)

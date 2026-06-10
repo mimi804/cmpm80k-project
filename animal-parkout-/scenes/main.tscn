@@ -4,12 +4,16 @@
 [ext_resource type="PackedScene" uid="uid://ms66jqlolilp" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bwbf3sfsy2wo0" path="res://script/killzone.gd" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://pvrkykurpxmg" path="res://assets/images/goal image/Cookie_sprite_01.png" id="4_jyhfs"]
+[ext_resource type="Script" uid="uid://dnrer5232ueqy" path="res://scenes/area_2d.gd" id="5_tbgi4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(8355, 635)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
 distance = 1.0000305
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_tefeu"]
+radius = 73.1622
 
 [node name="main" type="Node2D" unique_id=1898906107]
 metadata/_edit_horizontal_guides_ = [512.0, 109.0]
@@ -42,8 +46,15 @@ top_level = true
 light_mask = 2
 visibility_layer = 2
 texture_filter = 1
-position = Vector2(3615, 102)
+position = Vector2(5364, 213)
 scale = Vector2(0.779297, 0.5976561)
 texture = ExtResource("4_jyhfs")
+
+[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=653154159]
+script = ExtResource("5_tbgi4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1040977256]
+position = Vector2(1.2832077, 5.0196095)
+shape = SubResource("CircleShape2D_tefeu")
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]

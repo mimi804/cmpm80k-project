@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://dseifgsqgbed6"]
+
+[ext_resource type="Script" uid="uid://du23hpmk1nb8f" path="res://end_of_level.gd" id="1_52men"]
+[ext_resource type="Texture2D" uid="uid://c35ubblewp1r5" path="res://pixel-clouds-set-game-background_107791-34709.jpg.jpg" id="1_075u4"]
+[ext_resource type="FontFile" uid="uid://bttjhn71g84fa" path="res://DIMIS___.TTF" id="2_52men"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1lfbi"]
+texture = ExtResource("1_075u4")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1lfbi"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_thgqc"]
+bg_color = Color(0.654902, 0.654902, 0.654902, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lcgan"]
+bg_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6nyce"]
+bg_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_565iy"]
+bg_color = Color(0.654902, 0.654902, 0.654902, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_xapmj"]
+bg_color = Color(0.8745098, 0.8745098, 0.8745098, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="end_of_level" type="Control" unique_id=1446666556]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_52men")
+
+[node name="Panel" type="Panel" parent="." unique_id=2010904736]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_1lfbi")
+
+[node name="Label" type="Label" parent="." unique_id=264199029]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -242.0
+offset_top = -240.0
+offset_right = 265.0
+offset_bottom = -114.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.03137255, 0.41960785, 0.5294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_52men")
+theme_override_font_sizes/font_size = 90
+text = "You Did It !"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=167417067]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -177.5
+offset_top = -101.0
+offset_right = 177.5
+offset_bottom = 101.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=892376505]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_52men")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_1lfbi")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_thgqc")
+theme_override_styles/hover = SubResource("StyleBoxFlat_lcgan")
+text = "PLAY AGAIN"
+
+[node name="Button2" type="Button" parent="VBoxContainer" unique_id=92000109]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_focus_color = Color(0, 0, 0, 1)
+theme_override_colors/font_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_52men")
+theme_override_font_sizes/font_size = 35
+theme_override_styles/normal = SubResource("StyleBoxFlat_6nyce")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_565iy")
+theme_override_styles/hover = SubResource("StyleBoxFlat_xapmj")
+text = "EXIT
+"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_play_again_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button2" to="." method="_on_exit_pressed"]

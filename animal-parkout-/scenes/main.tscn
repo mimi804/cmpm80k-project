@@ -10,14 +10,17 @@
 size = Vector2(8355, 635)
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
-distance = 1.0000305
+distance = -16.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tefeu"]
 radius = 73.1622
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbgi4"]
+distance = 39.0
+
 [node name="main" type="Node2D" unique_id=1898906107]
-metadata/_edit_horizontal_guides_ = [512.0, 109.0]
-metadata/_edit_vertical_guides_ = [7.0]
+metadata/_edit_horizontal_guides_ = [512.0, 109.0, -29.0]
+metadata/_edit_vertical_guides_ = [7.0, 5570.0]
 
 [node name="tile_map" parent="." unique_id=1734353351 instance=ExtResource("1_0wfyh")]
 
@@ -26,18 +29,19 @@ texture_filter = 1
 position = Vector2(185, 484)
 
 [node name="Killzone" type="Area2D" parent="." unique_id=1098238552]
+position = Vector2(0, 4)
 script = ExtResource("3_sugp2")
 respawn_point = Vector2(242, 460)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=1543252662]
-position = Vector2(4017, 1249.5)
+position = Vector2(4033, 1280)
 shape = SubResource("RectangleShape2D_0wfyh")
 
 [node name="Left wall" type="StaticBody2D" parent="." unique_id=910379198]
 position = Vector2(-2306, 4)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Left wall" unique_id=1595095400]
-position = Vector2(0, 472)
+position = Vector2(-51, 480)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_sugp2")
 
@@ -56,5 +60,15 @@ script = ExtResource("5_tbgi4")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1040977256]
 position = Vector2(1.2832077, 5.0196095)
 shape = SubResource("CircleShape2D_tefeu")
+
+[node name="right wall" type="StaticBody2D" parent="." unique_id=140687338]
+position = Vector2(2, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="right wall" unique_id=1524095381]
+z_index = 6
+position = Vector2(5605, 247)
+rotation = -1.5707964
+shape = SubResource("WorldBoundaryShape2D_tbgi4")
+debug_color = Color(0.47058824, 0.44313726, 1, 1)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]

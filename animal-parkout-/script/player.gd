@@ -43,3 +43,7 @@ func _physics_process(delta: float) -> void:
 	elif direction == -1.0:
 		sprite.flip_h = false
 		sprite.offset.x = 0
+
+
+func _on_into_cookie_ending_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	get_tree().change_scene_to_file("res://end_of_level.tscn")

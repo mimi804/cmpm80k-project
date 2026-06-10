@@ -4,7 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://ms66jqlolilp" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bwbf3sfsy2wo0" path="res://script/killzone.gd" id="3_sugp2"]
 [ext_resource type="Texture2D" uid="uid://pvrkykurpxmg" path="res://assets/images/goal image/Cookie_sprite_01.png" id="4_jyhfs"]
-[ext_resource type="Script" uid="uid://dnrer5232ueqy" path="res://scenes/area_2d.gd" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://bgkk8pkc3c2o3" path="res://scenes/into_cookie_ending.gd" id="5_tbgi4"]
+[ext_resource type="Script" uid="uid://0q45l1cg6x4g" path="res://scenes/cookie.gd" id="6_tefeu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(8355, 635)
@@ -12,8 +13,11 @@ size = Vector2(8355, 635)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_sugp2"]
 distance = -16.0
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_tefeu"]
-radius = 73.1622
+[sub_resource type="CircleShape2D" id="CircleShape2D_tbgi4"]
+radius = 84.13736
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_o6xl0"]
+radius = 58.00862
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_tbgi4"]
 distance = 39.0
@@ -46,20 +50,42 @@ rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_sugp2")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=693219462]
+visible = false
 top_level = true
 light_mask = 2
 visibility_layer = 2
 texture_filter = 1
-position = Vector2(5364, 213)
-scale = Vector2(0.779297, 0.5976561)
+position = Vector2(5366.563, 213.625)
+scale = Vector2(0.8037095, 0.6035155)
 texture = ExtResource("4_jyhfs")
 
-[node name="Area2D" type="Area2D" parent="Sprite2D" unique_id=653154159]
+[node name="IntoCookieEnding" type="Area2D" parent="." unique_id=819798405]
+visible = false
+texture_filter = 1
+position = Vector2(2.5657887, 3.346405)
+collision_layer = 2
+collision_mask = 2
 script = ExtResource("5_tbgi4")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Area2D" unique_id=1040977256]
-position = Vector2(1.2832077, 5.0196095)
-shape = SubResource("CircleShape2D_tefeu")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="IntoCookieEnding" unique_id=1706951383]
+visible = false
+position = Vector2(0, 3.3464062)
+shape = SubResource("CircleShape2D_tbgi4")
+one_way_collision_margin = 5.0
+
+[node name="cookie" type="Area2D" parent="." unique_id=435618461]
+script = ExtResource("6_tefeu")
+
+[node name="Sprite2D" type="Sprite2D" parent="cookie" unique_id=1552205664]
+top_level = true
+texture_filter = 1
+position = Vector2(5405, 187)
+texture = ExtResource("4_jyhfs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="cookie" unique_id=1776282722]
+z_index = 1
+position = Vector2(5408, 194)
+shape = SubResource("CircleShape2D_o6xl0")
 
 [node name="right wall" type="StaticBody2D" parent="." unique_id=140687338]
 position = Vector2(2, 4)
@@ -72,3 +98,5 @@ shape = SubResource("WorldBoundaryShape2D_tbgi4")
 debug_color = Color(0.47058824, 0.44313726, 1, 1)
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]
+[connection signal="body_entered" from="IntoCookieEnding" to="IntoCookieEnding" method="_on_body_entered"]
+[connection signal="body_shape_entered" from="IntoCookieEnding" to="player" method="_on_into_cookie_ending_body_shape_entered"]

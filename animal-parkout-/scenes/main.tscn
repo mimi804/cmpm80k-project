@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dler10jav1mfj" path="res://scenes/tile_map.tscn" id="1_0wfyh"]
 [ext_resource type="PackedScene" uid="uid://ms66jqlolilp" path="res://scenes/player.tscn" id="1_ig7tw"]
 [ext_resource type="Script" uid="uid://bwbf3sfsy2wo0" path="res://script/killzone.gd" id="3_sugp2"]
+[ext_resource type="Texture2D" uid="uid://pvrkykurpxmg" path="res://assets/images/goal image/Cookie_sprite_01.png" id="4_jyhfs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0wfyh"]
 size = Vector2(8355, 635)
@@ -35,5 +36,14 @@ position = Vector2(-2306, 4)
 position = Vector2(0, 472)
 rotation = 1.5707964
 shape = SubResource("WorldBoundaryShape2D_sugp2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=693219462]
+top_level = true
+light_mask = 2
+visibility_layer = 2
+texture_filter = 1
+position = Vector2(3615, 102)
+scale = Vector2(0.779297, 0.5976561)
+texture = ExtResource("4_jyhfs")
 
 [connection signal="body_entered" from="Killzone" to="Killzone" method="_on_body_entered"]

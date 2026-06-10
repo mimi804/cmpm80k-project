@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://dseifgsqgbed6"]
 
-[ext_resource type="Script" uid="uid://du23hpmk1nb8f" path="res://end_of_level.gd" id="1_52men"]
-[ext_resource type="Texture2D" uid="uid://c35ubblewp1r5" path="res://pixel-clouds-set-game-background_107791-34709.jpg.jpg" id="1_075u4"]
-[ext_resource type="FontFile" uid="uid://dd2kihp5dkw41" path="res://DIMIS___.TTF" id="2_52men"]
+[ext_resource type="Script" uid="uid://du23hpmk1nb8f" path="res://script/end_of_level.gd" id="1_52men"]
+[ext_resource type="Texture2D" uid="uid://c35ubblewp1r5" path="res://assets/images/janeen/pixel-clouds-set-game-background_107791-34709.jpg.jpg" id="1_075u4"]
+[ext_resource type="FontFile" uid="uid://dd2kihp5dkw41" path="res://assets/images/janeen/DIMIS___.TTF" id="2_52men"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1lfbi"]
 texture = ExtResource("1_075u4")

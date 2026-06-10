@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://c3soiuguxndj5"]
 
-[ext_resource type="Texture2D" uid="uid://bvr3fvmf0xw7u" path="res://Background image 2.webp" id="1_7vrkn"]
-[ext_resource type="Script" uid="uid://du3cuwo7xmw26" path="res://main_menu.gd" id="1_fu7sn"]
-[ext_resource type="FontFile" uid="uid://dd2kihp5dkw41" path="res://DIMIS___.TTF" id="2_fu7sn"]
+[ext_resource type="Texture2D" uid="uid://bvr3fvmf0xw7u" path="res://assets/images/janeen/Background image 2.webp" id="1_7vrkn"]
+[ext_resource type="Script" uid="uid://du3cuwo7xmw26" path="res://script/main_menu.gd" id="1_fu7sn"]
+[ext_resource type="FontFile" uid="uid://dd2kihp5dkw41" path="res://assets/images/janeen/DIMIS___.TTF" id="2_fu7sn"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jix8l"]
 texture = ExtResource("1_7vrkn")

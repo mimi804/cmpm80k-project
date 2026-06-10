@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c35ubblewp1r5"
-path="res://.godot/imported/pixel-clouds-set-game-background_107791-34709.jpg.jpg-f2ba982cbbb2a91af856c3b31a353db5.ctex"
+path="res://.godot/imported/pixel-clouds-set-game-background_107791-34709.jpg.jpg-fe14ea635ebc26fe94944dc6c60f4e62.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pixel-clouds-set-game-background_107791-34709.jpg.jpg"
-dest_files=["res://.godot/imported/pixel-clouds-set-game-background_107791-34709.jpg.jpg-f2ba982cbbb2a91af856c3b31a353db5.ctex"]
+source_file="res://assets/images/janeen/pixel-clouds-set-game-background_107791-34709.jpg.jpg"
+dest_files=["res://.godot/imported/pixel-clouds-set-game-background_107791-34709.jpg.jpg-fe14ea635ebc26fe94944dc6c60f4e62.ctex"]
 
 [params]
 

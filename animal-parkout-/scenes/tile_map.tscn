@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cqy0sxliimgvt" path="res://assets/images/tile stuff/new set/newest_set.png" id="1_dohrl"]
 [ext_resource type="Texture2D" uid="uid://chyemmcxa06vy" path="res://assets/images/tile stuff/merged tiles.png" id="1_tjuek"]
 [ext_resource type="Texture2D" uid="uid://bfuypkgr6ujus" path="res://assets/images/tile stuff/tree_tile_set.png" id="3_jx7lj"]
+[ext_resource type="FontFile" uid="uid://dd2kihp5dkw41" path="res://assets/images/janeen/DIMIS___.TTF" id="5_f6fy2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_f6fy2"]
 texture = ExtResource("1_dohrl")
@@ -320,7 +321,7 @@ sources/0 = SubResource("TileSetAtlasSource_dohrl")
 [sub_resource type="Theme" id="Theme_dohrl"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_f6fy2"]
-bg_color = Color(0.32419494, 0.34155932, 0.33866522, 1)
+bg_color = Color(0.37254903, 0.8039216, 0.89411765, 1)
 border_width_left = 2
 border_width_top = 2
 border_width_right = 2
@@ -368,11 +369,17 @@ theme_override_styles/panel = SubResource("StyleBoxFlat_f6fy2")
 
 [node name="Label" type="Label" parent="Control" unique_id=1392121713]
 layout_mode = 0
-offset_right = 139.0
-offset_bottom = 49.0
+offset_left = 6.0
+offset_top = 6.0
+offset_right = 145.0
+offset_bottom = 55.0
 theme = SubResource("Theme_kvphj")
-text = "<- Tutorial Area
-     Game Space  ->"
+theme_override_colors/font_color = Color(0.03137255, 0.41960785, 0.5294118, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("5_f6fy2")
+theme_override_font_sizes/font_size = 15
+text = "← Tutorial Area
+     Game Space →"
 
 [node name="Control2" type="Control" parent="." unique_id=1488244297]
 layout_mode = 3

@@ -274,7 +274,7 @@ shape = SubResource("CapsuleShape2D_fjrip")
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1348724360]
 position = Vector2(-3, 0)
 zoom = Vector2(1.1, 1.1)
-limit_left = -3038
+limit_left = -2654
 limit_right = 5590
 limit_bottom = 1000
 position_smoothing_enabled = true

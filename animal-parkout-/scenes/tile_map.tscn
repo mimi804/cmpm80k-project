@@ -453,3 +453,22 @@ theme_override_font_sizes/font_size = 22
 text = "You're almost there...
 climb the tree! →
 "
+
+[node name="Control6" type="Control" parent="." unique_id=610320403]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="Control6" unique_id=1205498535]
+layout_mode = 0
+offset_left = 3420.0
+offset_top = -252.0
+offset_right = 3478.0
+offset_bottom = -71.0
+theme_override_colors/font_color = Color(0.41568628, 0.74509805, 0.1882353, 1)
+theme_override_colors/font_shadow_color = Color(0.4, 0.22352941, 0.19215687, 1)
+theme_override_fonts/font = ExtResource("5_f6fy2")
+theme_override_font_sizes/font_size = 70
+text = "➚
+"
